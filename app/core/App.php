@@ -31,6 +31,14 @@ class App extends Base
     protected $params = [];
 
     /**
+     * App constructor.
+     */
+    public function __construct()
+    {
+        $this->url = $this->parseUrl();
+    }
+
+    /**
      * Run the app by calling the controller method and passing it
      * any given params.
      */
@@ -63,7 +71,6 @@ class App extends Base
      */
     private function setController()
     {
-        $this->url = $this->parseUrl();
         $url = '../app/controllers/' . ucfirst($this->url[0]) . 'Controller.php';
 
         if (file_exists($url)) {

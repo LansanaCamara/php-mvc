@@ -31,3 +31,6 @@
 ## File-based project format:
 *.ipr
 *.iws
+
+public/mvc-access.log
+public/mvc-error.log
