@@ -1,0 +1,15 @@
+Options -MultiViews
+
+RewriteEngine On
+
+# Redirect Trailing Slashes If Not A Folder...
+# Ex: 'foo/bar/' becomes 'foo/bar'. This removes the
+# need to trim the url in our code to remove trailing slash.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
