@@ -29,7 +29,7 @@ class ContactController extends Controller
     {
         $contact = $this->model('Contact');
 
-        // Loads 'public/views/pages/contact.php' and passes $title which equals 'Contact Page'.
+        // Loads 'app/views/pages/contact.php' and passes $title which equals 'Contact Page'.
         $this->view('contact', ['title' => $contact->title]);
     }
 }
