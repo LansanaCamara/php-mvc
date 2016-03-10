@@ -35,7 +35,7 @@ class ContactController extends Controller
 }
 ```
 
-Finally, the `$title` variable can be used in our view at `public/views/pages/contact.php`...
+Finally, the `$title` variable can be used in our view at `app/views/pages/contact.php`...
 
 ```
 <h1><?php echo $title; ?></h1> // Outputs 'Contact Page'
