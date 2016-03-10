@@ -1,6 +1,6 @@
 PHP MVC Framework
 ============================
-* A very basic start to your own PHP MVC framework.
+A very basic start to your own PHP MVC framework.
 
 Installation
 ============================
@@ -29,7 +29,8 @@ class ContactController extends Controller
     {
         $contact = $this->model('Contact');
 
-        $this->view('contact', ['title' => $contact->title]); // Loads 'public/views/pages/contact.php' and passes a $title value that equals 'Contact Page'.
+        // Loads 'public/views/pages/contact.php' and passes $title which equals 'Contact Page'.
+        $this->view('contact', ['title' => $contact->title]);
     }
 }
 ```
