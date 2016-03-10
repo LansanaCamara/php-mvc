@@ -1,4 +1,4 @@
-PHP MVC Framework
+Starter PHP MVC Framework
 ============================
 A very basic start to your own PHP MVC framework.
 
@@ -40,3 +40,13 @@ Finally, the `$title` variable can be used in our view at `app/views/pages/conta
 ```
 <h1><?php echo $title; ?></h1> // Outputs 'Contact Page'
 ```
+
+Contributing
+============================
+  1. Create a branch from the `dev` branch
+  2. Implement your new feature
+  3. Submit a pull request to be merge in the `dev` branch
+
+Author
+============================
+* Lansana Camara
