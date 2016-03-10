@@ -71,12 +71,13 @@ class App extends Base
      */
     private function setController()
     {
-        $url = '../app/controllers/' . ucfirst($this->url[0]) . 'Controller.php';
+        $path = '../app/controllers/' . $this->url[0] . 'Controller.php';
 
-        if (file_exists($url)) {
-            $this->controller = ucfirst($this->url[0]) . 'Controller';
+        if (file_exists($path)) {
+            $this->controller = $this->url[0] . 'Controller';
             unset($this->url[0]);
-        } else if (!file_exists($url) && !empty($this->url[0])) {
+        }
+        else if (!file_exists($path) && !empty($this->url[0])) {
             $this->respondNotFound();
         }
 
@@ -99,10 +100,9 @@ class App extends Base
     /**
      * Set the params to pass to the controller method.
      *
-     * Params equal the remaining values in the url array rebased,
-     * or an empty array.
+     * Params equal the remaining values in the url array rebased.
      *
-     * Additionally, we pass the $_POST super global for an optional
+     * Additionally, we pass the $_POST super global for any optional
      * POST data
      */
     private function setParams()
